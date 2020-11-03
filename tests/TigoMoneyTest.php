@@ -19,7 +19,7 @@ class TigoMoneyTest extends TestCase
         $agentName = getenv('AGENT_NAME');
 
         $this->tigomoney = new Client($clientId, $clientSecret, $agentAccount, $agentPin, $agentName);
-        $this->tigomoney->sandboxMode(true);
+        $this->tigomoney->sandboxMode(false);
     }
 
     public function testAuth()
@@ -41,8 +41,8 @@ class TigoMoneyTest extends TestCase
                     'country' => 'PRY',
                     'emailId' => 'johndoe@mail.com',
                 ),
-            'redirectUri' => 'https://dev.geek-wallet.com/tigo/callback',
-            'callbackUri' => 'https://dev.geek-wallet.com/tigo/callback',
+            'redirectUri' => 'https://www.4gamersclub.com/',
+            'callbackUri' => 'https://www.4gamersclub.com/',
             'language' => 'spa',
             'OriginPayment' =>
                 array (
